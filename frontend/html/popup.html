@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gmail Spam Detector</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+      .button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-top: 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .button:hover {
+        background-color: #0056b3;
+      }
+      .delete-button {
+        background-color: red;
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .message {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 10px;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+      }
+      .spam {
+        color: red;
+      }
+      .button-container {
+        display: flex;
+        justify-content: space-between;
+      }
+      .button-container button {
+        padding: 5px 10px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+      .button-container button:hover {
+        background-color: #eee;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Gmail Spam Detector</h1>
+    <!-- <button id="fetchButton" class="button">Fetch Messages</button> -->
+    <div id="messages"></div>
+    <script src="../js/popup.js"></script>
+  </body>
+</html>
