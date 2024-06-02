@@ -11,6 +11,8 @@ nltk.download('stopwords')
 nltk.download('punkt')
 
 app = Flask(__name__)
+
+## Extention ID to replace chrome-extension://ndcdnhkokckajcfffdpcalhnmknabdcn
 CORS(app, resources={r"/predict": {"origins": "chrome-extension://ndcdnhkokckajcfffdpcalhnmknabdcn"}})
 
 ps = PorterStemmer()

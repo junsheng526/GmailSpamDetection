@@ -2,9 +2,12 @@ GMAIL SPAM DETECTION SYSTEM
 
 divided into 3 part
 
-- AI Model Analysis
-- AI Model Deployment
-- Chrome Extention (UI)
+1. AI Model Analysis
+- Analysis the dataset and train out the model
+2. AI Model Deployment
+- Setup flask server with GET and POST method between ui and AI model 
+3. Chrome Extention (UI)
+- Build an extention to detect and remove the spam email 
 
 Python Library Requirements (pip install)
 - stopwords
@@ -26,7 +29,7 @@ Python Library Requirements (pip install)
 6. Application Type select Chrome Extention
 7. Item ID is your extention ID after you done step 2 in "Run in Chrome Extention (UI)"
 8. Click "Create" then will popup the CLIENT_ID which you need to copy and replace in this application
-
+9. Remember to replace extention ID in api.py line 16
 
 #How to run?
 Flask Server

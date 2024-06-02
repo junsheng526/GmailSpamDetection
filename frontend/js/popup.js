@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Perform message fetching and scanning here
-  chrome.identity.getAuthToken({ interactive: true }, (token) => {
+  chrome.identity.getAuthToken({ interactive: true }, async (token) => {
     if (chrome.runtime.lastError) {
       console.error(chrome.runtime.lastError);
       return;
     }
 
     console.log("Fetching email message");
-    fetch(
+    await fetch(
       "https://www.googleapis.com/gmail/v1/users/me/messages?maxResults=10",
       {
         headers: {
@@ -26,8 +26,8 @@ document.addEventListener("DOMContentLoaded", function () {
           return;
         }
 
-        messages.forEach((message) => {
-          fetch(
+        messages.forEach(async (message) => {
+          await fetch(
             `https://www.googleapis.com/gmail/v1/users/me/messages/${message.id}`,
             {
               headers: {
